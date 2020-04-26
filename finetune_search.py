@@ -20,6 +20,7 @@ def parse_args():
     parser.add_argument('--controller_tanh_constant', type=float, default=1.10)
 
     parser.add_argument('--gpu', type=int, default=0, help='gpu device id')
+    parser.add_argument('--report_freq', type=float, default=10, help='report frequency')
     parser.add_argument('--save', type=str, default='EXP', help='experiment name')
     parser.add_argument('--seed', type=int, default=2, help='random seed')
     args = parser.parse_args()
