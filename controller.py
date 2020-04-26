@@ -18,7 +18,7 @@ class Controller(torch.nn.Module):
         self.temperature = args.temperature
         self.tanh_constant = args.controller_tanh_constant
 
-        self.encoder = nn.Embedding(self.num_choices, self.lstm_size)
+        self.encoder = nn.Embedding(self.num_choices+1, self.lstm_size)
 
         self.lstm = nn.LSTMCell(self.lstm_size, self.lstm_size)
         self.w_soft = nn.Linear(self.lstm_size, self.num_choices, bias=False)
